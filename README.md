@@ -212,9 +212,18 @@ AWS e Escola da Nuvem
 
 ---
 
-## Contato
+## 📍 Sobre o Desenvolvedor
 
-Se você tiver dúvidas ou sugestões, sinta-se à vontade para entrar em contato comigo via  [Heberton Geovane](https://www.linkedin.com/in/heberton-geovane/)
+**José Eduardo Cardoso**  
+📧 Email: dcardprint@gmail.com  
+💼 LinkedIn: [José Eduardo Cardoso - Developer](https://www.linkedin.com/in/jos%C3%A9-eduardo-cardoso-developer/)  
+📍 Governador Valadares - MG  
+📅 Julho de 2025  
 
+---
+
+## 📞 Contato
+
+Se você tiver dúvidas ou sugestões, sinta-se à vontade para entrar em contato comigo através dos canais mencionados acima.
 
 Este repositório faz parte de um projeto **educacional em tecnologia**, promovido pela **Escola da Nuvem** com apoio da **AWS**. Nosso objetivo é formar talentos preparados para os desafios do mercado digital, com base em práticas modernas de desenvolvimento, **metodologias ágeis**, e **computação em nuvem**.
