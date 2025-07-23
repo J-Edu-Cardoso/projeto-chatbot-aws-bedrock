@@ -10,12 +10,12 @@
         body {
             margin: 0;
             font-family: 'Roboto', Arial, sans-serif;
-            background: #f6f8fa;
+            background: #d9f1dd;
         }
         .sidebar {
             width: 240px;
-            background: #0b4744;
-            color: #fff;
+            background: #0f302d7a;
+            color: #e5f7ec;
             height: 100vh;
             position: fixed;
             top: 0; left: 0;
@@ -37,13 +37,13 @@
             display: flex;
             align-items: center;
             padding: 16px 24px;
-            color: #fff;
+            color: #e8f7ecf6;
             text-decoration: none;
             font-size: 1rem;
-            transition: background 0.6s;
+            transition: background 0.3s;
         }
         .sidebar nav a:hover, .sidebar nav a.active {
-            background: #208d5f;
+            background: #08271756;
         }
         .sidebar nav i {
             margin-right: 16px;
@@ -61,7 +61,7 @@
         }
         .header h1 {
             font-size: 2rem;
-            color: #0b4744;
+            color: #197250;
             margin: 0;
         }
         .profile {
@@ -76,10 +76,10 @@
         }
         .profile span {
             font-weight: 500;
-            color: #333;
+            color: #234b17;
         }
         .card {
-            background: #fff;
+            background: #87922357;
             border-radius: 10px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
             padding: 28px 24px;
@@ -91,7 +91,7 @@
             gap: 24px;
         }
         .course-card {
-            background: #e3fde5ce;
+            background: #0f331a71;
             border-radius: 8px;
             padding: 20px 18px;
             display: flex;
@@ -101,17 +101,17 @@
         }
         .course-card h3 {
             margin: 0 0 10px 0;
-            color: #2c3530;
+            color: #f8fff9;
             font-size: 1.2rem;
         }
         .course-card .meta {
             font-size: 0.95rem;
-            color: #208d5f;
+            color: #dcfaee;
             margin-bottom: 12px;
         }
         .course-card button {
-            background: #7bf7bd;
-            color: #2138239d;
+            background: #1a8050;
+            color: #d5f8e3;
             border: none;
             padding: 8px 16px;
             border-radius: 5px;
@@ -119,23 +119,23 @@
             cursor: pointer;
         }
         .course-card button:hover {
-            background: #095f37;
+            background: #cbe6da;
         }
         .section-title {
-            color: #0d533e;
+            color: #157457;
             font-size: 1.3rem;
             margin-bottom: 18px;
             font-weight: 600;
         }
         .progress-bar {
-            background: #0b775379;
+            background: #ebfaf5e3;
             border-radius: 6px;
             overflow: hidden;
             height: 18px;
             margin: 10px 0 18px 0;
         }
         .progress-bar-inner {
-            background: #0c5a3b;
+            background: #104d1ead;
             height: 100%;
             width: 70%;
             transition: width 0.4s;
@@ -144,15 +144,15 @@
             margin-top: 18px;
         }
         .messages .msg {
-            background: #80f3d67a;
+            background: #87fcbbda;
             border-radius: 7px;
             padding: 12px 14px;
             margin-bottom: 12px;
-            color: #222;
+            color: #0b2215;
         }
         .messages .msg.teacher {
-            background: #c5cae9;
-            color: #1a237e;
+            background:#f5f780;
+            color: #0b2215;
         }
         .profile-section {
             max-width: 500px;
@@ -180,10 +180,10 @@
     </div>
     <div class="main">
         <div class="header">
-            <h1 id="page-title">Página Inicial</h1>
+            <h1 id="page-title">Home</h1>
             <div class="profile">
                 <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do estudante">
-                <span>Estudante Exemplo</span>
+                <span>Jonas B. de Oliveira</span>
             </div>
         </div>
         <div id="content">
@@ -302,266 +302,13 @@
             <button class="chatbot-close" id="chatbotClose" title="Fechar">&times;</button>
         </div>
         <div class="chatbot-messages" id="chatbotMessages">
-            <div style="color:#999; text-align:center; margin-top:40px;">Como posso ajudar?</div>
+            <div style="color:#113d1e86; text-align:center; margin-top:40px;">Como posso ajudar?</div>
         </div>
         <form class="chatbot-input" id="chatbotForm" autocomplete="off">
             <input type="text" id="chatbotInput" placeholder="Digite sua mensagem..." required />
             <button type="submit"><i class="fa fa-paper-plane"></i></button>
         </form>
     </div>
-    <style>
-        /* Chatbot Flutuante - Paleta Verde, isolado */
-        .chatbot-fab {
-            position: fixed;
-            right: 32px;
-            bottom: 32px;
-            width: 64px;
-            height: 64px;
-            background: #0b4744;
-            color: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.16);
-            cursor: pointer;
-            z-index: 9999;
-            font-size: 2.2rem;
-            transition: background 0.2s;
-        }
-        .chatbot-fab:hover {
-            background: #208d5f;
-        }
-        .chatbot-window {
-            position: fixed;
-            right: 32px;
-            bottom: 110px;
-            width: 340px;
-            max-width: 92vw;
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.24);
-            z-index: 10000;
-            display: none;
-            flex-direction: column;
-            overflow: hidden;
-        }
-        .chatbot-window.active {
-            display: flex;
-        }
-        .chatbot-header {
-            background: #0b4744;
-            color: #fff;
-            padding: 14px 18px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .chatbot-header span {
-            font-weight: 600;
-        }
-        .chatbot-close {
-            background: none;
-            border: none;
-            color: #fff;
-            font-size: 1.3rem;
-            cursor: pointer;
-        }
-        .chatbot-messages {
-            padding: 18px 14px;
-            height: 220px;
-            overflow-y: auto;
-            background: #f6f8fa;
-            font-size: 0.97rem;
-        }
-        .chatbot-input {
-            display: flex;
-            border-top: 1px solid #eee;
-            background: #f9f9f9;
-        }
-        .chatbot-input input {
-            flex: 1;
-            border: none;
-            padding: 12px;
-            font-size: 1rem;
-            border-radius: 0 0 0 16px;
-            outline: none;
-            background: transparent;
-        }
-        .chatbot-input button {
-            border: none;
-            background: #0b4744;
-            color: #fff;
-            padding: 0 20px;
-            font-size: 1.2rem;
-            border-radius: 0 0 16px 0;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        .chatbot-input button:hover {
-            background: #208d5f;
-        }
-        @media (max-width: 700px) {
-            .chatbot-window { right: 6vw; width: 94vw; }
-            .chatbot-fab { right: 6vw; }
-        }
-    </style>
-    <script>
-        // Chatbot flutuante
-        const chatbotFab = document.getElementById('chatbotFab');
-        const chatbotWindow = document.getElementById('chatbotWindow');
-        const chatbotClose = document.getElementById('chatbotClose');
-        const chatbotForm = document.getElementById('chatbotForm');
-        const chatbotInput = document.getElementById('chatbotInput');
-        const chatbotMessages = document.getElementById('chatbotMessages');
-
-        chatbotFab.onclick = () => {
-            chatbotWindow.classList.add('active');
-            chatbotInput.focus();
-        };
-        chatbotClose.onclick = () => {
-            chatbotWindow.classList.remove('active');
-        };
-        chatbotForm.onsubmit = async (e) => {
-            e.preventDefault();
-            const msg = chatbotInput.value.trim();
-            if (!msg) return;
-            chatbotMessages.innerHTML += `<div style='margin-bottom:8px; text-align:right;'><span style='background:#0b4744;color:#fff;padding:6px 12px;border-radius:12px 12px 0 12px;display:inline-block;'>${msg}</span></div>`;
-            chatbotInput.value = '';
-            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-            // Integração real com backend
-            try {
-                const resp = await fetch('http://localhost:5000/api/chat', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ mensagem: msg })
-                });
-                const data = await resp.json();
-                chatbotMessages.innerHTML += `<div style='margin-bottom:8px; text-align:left;'><span style='background:#e3fde5ce;color:#0b4744;padding:6px 12px;border-radius:12px 12px 12px 0;display:inline-block;'>${data.resposta}</span></div>`;
-                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-            } catch (err) {
-                chatbotMessages.innerHTML += `<div style='margin-bottom:8px; text-align:left;'><span style='background:#e3fde5ce;color:#c00;padding:6px 12px;border-radius:12px 12px 12px 0;display:inline-block;'>Erro ao conectar ao assistente.</span></div>`;
-            }
-        };
-
-        // Funções para integração das seções com backend
-        async function carregarCursos() {
-            try {
-                const resp = await fetch('http://localhost:5000/api/cursos');
-                const data = await resp.json();
-                return data.cursos;
-            } catch {
-                return [];
-            }
-        }
-        async function carregarProgresso() {
-            try {
-                const resp = await fetch('http://localhost:5000/api/progresso');
-                const data = await resp.json();
-                return data.progresso;
-            } catch {
-                return [];
-            }
-        }
-        async function carregarMensagens() {
-            try {
-                const resp = await fetch('http://localhost:5000/api/mensagens');
-                const data = await resp.json();
-                return data.mensagens;
-            } catch {
-                return [];
-            }
-        }
-        async function carregarPerfil() {
-            try {
-                const resp = await fetch('http://localhost:5000/api/perfil');
-                return await resp.json();
-            } catch {
-                return null;
-            }
-        }
-
-        // Substituir conteúdo dinâmico das seções para consumir backend
-        async function showSection(section) {
-            if(section === 'cursos') {
-                title.textContent = 'Meus Cursos';
-                const cursos = await carregarCursos();
-                content.innerHTML = `
-                    <div class="section-title">Cursos Matriculados</div>
-                    <div class="courses">
-                        ${cursos.map(c => `
-                        <div class="course-card">
-                            <h3>${c.course_name || c.nome || 'Curso'}</h3>
-                            <div class="meta">Duração: ${c.duration || c.duracao || 'N/A'} | Nível: ${c.level || c.nivel || 'N/A'}</div>
-                            <button>Acessar Curso</button>
-                        </div>
-                        `).join('')}
-                    </div>
-                `;
-            } else if(section === 'progresso') {
-                title.textContent = 'Progresso';
-                const progresso = await carregarProgresso();
-                content.innerHTML = `
-                    <div class="section-title">Progresso nos Cursos</div>
-                    ${progresso.map(p => `
-                    <div class="card">
-                        <b>${p.curso}</b>
-                        <div class="progress-bar"><div class="progress-bar-inner" style="width:${p.percentual}%"></div></div>
-                        <span>${p.percentual}% concluído - Nota: ${p.nota}</span>
-                    </div>`).join('')}
-                `;
-            } else if(section === 'mensagens') {
-                title.textContent = 'Mensagens';
-                const msgs = await carregarMensagens();
-                content.innerHTML = `
-                    <div class="section-title">Mensagens</div>
-                    <div class="messages">
-                        ${msgs.map(m => `<div class="msg${m.autor==='professor'?' teacher':''}">${m.autor.charAt(0).toUpperCase()+m.autor.slice(1)}: ${m.texto}</div>`).join('')}
-                    </div>
-                    <textarea rows="4" style="width:100%;margin-top:10px;resize:vertical;" placeholder="Escreva sua mensagem..."></textarea>
-                    <button style="margin-top:10px;float:right;background:#0b4744;color:#fff;padding:8px 18px;border-radius:5px;border:none;">Enviar</button>
-                `;
-            } else if(section === 'perfil') {
-                title.textContent = 'Meu Perfil';
-                const perfil = await carregarPerfil();
-                content.innerHTML = `
-                    <div class="section-title">Perfil do Estudante</div>
-                    <div class="profile-section card">
-                        <div class="profile-info"><b>Nome:</b> ${perfil && perfil.nome ? perfil.nome : 'Estudante Exemplo'}</div>
-                        <div class="profile-info"><b>E-mail:</b> ${perfil && perfil.email ? perfil.email : 'estudante@exemplo.com'}</div>
-                        <div class="profile-info"><b>Região:</b> ${perfil && perfil.regiao ? perfil.regiao : 'Sudeste'}</div>
-                        <div class="profile-info"><b>Cursos concluídos:</b> ${perfil && perfil.cursos_concluidos ? perfil.cursos_concluidos : '2'}</div>
-                        <div class="profile-info"><b>Certificados:</b> ${perfil && perfil.certificados ? 'Disponíveis para download' : 'Nenhum'}</div>
-                        <button style="margin-top:10px;">Baixar Certificados</button>
-                    </div>
-                `;
-            } else {
-                title.textContent = 'Página Inicial';
-                content.innerHTML = `
-                    <div class="section-title">Bem-vindo(a) ao Portal do Estudante!</div>
-                    <div class="card">
-                        Esta é uma iniciativa social que oferece <b>cursos 100% gratuitos e online</b> para pessoas em situação de vulnerabilidade social, com foco em tecnologia, empregabilidade e soft skills.
-                    </div>
-                    <div class="section-title">Cursos em Destaque</div>
-                    <div class="courses">
-                        <div class="course-card">
-                            <h3>DevOps com AWS</h3>
-                            <div class="meta">Duração: 6 semanas | Nível: Intermediário</div>
-                        </div>
-                        <div class="course-card">
-                            <h3>Banco de Dados para Iniciantes</h3>
-                            <div class="meta">Duração: 4 semanas | Nível: Básico</div>
-                        </div>
-                        <div class="course-card">
-                            <h3>Metodologias Ágeis e Soft Skills</h3>
-                            <div class="meta">Duração: 5 semanas | Nível: Todos os níveis</div>
-                        </div>
-                    </div>
-                `;
-            }
-        }
-        // Inicialização
-        showSection('home');
-    </script>
-</body>
+    <script src="chatbot_fab.js"></script>
+</body> 
 </html>
